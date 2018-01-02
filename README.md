@@ -1,6 +1,6 @@
 # task 
 
-###CSS常见样式书写
+* CSS常见样式书写
 
 [task8-1 and task8-2](https://dtsgx126.github.io/task/demos/task8.html)	，
 [task8-3](https://dtsgx126.github.io/task/demos/task8-3.html)，
