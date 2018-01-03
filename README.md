@@ -8,4 +8,4 @@
 [task8-5](https://dtsgx126.github.io/task/task8-5.html)
 * css雪碧图
 
-[task9](https://dtsgx126.github.io/task/task9-1.html)
+[task9](https://dtsgx126.github.io/task/task9.html)
