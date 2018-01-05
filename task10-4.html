@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task10-4</title>
+	<style>
+		.nav{
+			width: 40%;
+			background: #f1f1f1;
+			margin: 0 auto;
+			border-radius: 3px;
+
+		}
+		ul:after{
+			display: block;
+			clear:both;
+			content:"";
+		}
+		.nav ul{
+			margin: 0;
+			padding:0;
+			box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.16);
+		}
+		.nav li{
+			float: left;
+			list-style: none;
+			padding:10px 15px;
+			position: relative;
+		}
+		.nav li:hover{
+			background: #ccc;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		li:hover .option{
+			display: block;
+		}
+		.option{
+			display:none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+			min-width: 160px;
+			z-index: 1;
+		}
+		.option a{
+			display: block;
+			padding: 8px 4px;
+		}
+		.option a:hover{
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="">首页</a></li>
+			<li><a href="">作品</a></li>
+			<li class="option-li"><a href="">更多</a>
+				<div class="option">
+					<a href="">github</a>
+					<a href="">知乎</a>
+					<a href="">博客</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
