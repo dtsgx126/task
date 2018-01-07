@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task11-3</title>
+	<style>
+		.content{
+			width: 800px;
+			margin:300px auto;
+			border-top:2px solid #666;
+			border-bottom: 2px solid #666;
+			padding: 20px 0;
+		}
+		.aside{
+			float: right;
+			width: 250px;
+			height: 166.66px;
+			border-radius:10px;
+			overflow: hidden;
+			box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+		}
+		.aside img{
+			width: 130%;
+			border-radius:10px;
+		}
+		.head-i{
+			width: 50px;
+			height: 50px;
+			border:1px solid #ccc;
+			border-radius: 50%;
+			overflow: hidden;
+
+		}
+		.head-i img{
+			width: 200%;
+		}
+		.info{
+			overflow: hidden;
+		}
+		.info>.head-i,.info>span{
+			float: left;
+			line-height: 50px;
+			margin-right: 15px;
+		}
+		.main p{
+			overflow:hidden; 
+			text-overflow:ellipsis;
+			display:-webkit-box; 
+			-webkit-box-orient:vertical;
+			-webkit-line-clamp:2;  /*显示两行 white-space:normal为显示一行*/
+			font-weight:500;
+			}
+		.main p span{
+			margin-right: 5px;
+			font-weight: bold;
+		}
+		.main .button{
+			border:1px solid red;
+			color: red;
+			opacity: 0.5;
+			font-size: 20px;
+			cursor: pointer;
+			width: 50px;
+			text-align: center;
+			border-radius: 3px;
+			padding: 2px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">		
+		<div class="aside">
+			<img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+		</div>
+		<div class="main">
+			<div class="info">
+				<div class="head-i">
+					<img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6" alt="">
+				</div>
+				<span>林牧之</span>
+				<span class="time">8小时前</span>	
+			</div>
+			<h2>坚持读书这么多年，真是太值了</h2>
+			<p class="status"><span>2017.5.27|NO.18</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque omnis exercitationem labore officiis. Quae soluta nisi vel, porro, praesentium eius nulla veniam illo, enim odio culpa voluptates debitis! Officia.</p>
+			<div class="button">读书</div>			
+		</div>
+	</div>
+</body>
+</html>

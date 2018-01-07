@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin:10px 0;
+			padding:0;
+		}
+		.header{
+			border:5px #ccc solid;
+			width: 500px;
+			text-align: center;
+			margin: 0 auto;
+			padding: 10px;
+			font-size: 0;
+		}
+		.nav{
+			display: inline-block;
+			width: 50px;
+			height: 20px;
+			border:3px black solid;
+			margin: 0;
+			border-right:none;
+		}
+		.nav:last-child{
+			border-right:3px black solid;
+		}
+		.content,.footer{
+			border:5px #ccc solid;
+			overflow: hidden;
+			padding: 10px;
+			margin: 10px 0;
+		}
+		.content{
+			border-color: red;
+		}
+		.aside{
+			float: right;
+			width: 300px;
+			height: 500px;
+			border:3px black solid;
+		}
+		.main{
+			margin-right: 310px;
+			border:3px black solid;
+			height: 200px;
+		}
+		.f-aside{
+			float: left;
+			width: 100px;
+			height: 200px;
+			border:3px black solid;
+		}
+		.f-menu{
+			float: right;
+			width: 200px;
+			height: 300px;
+			border:3px black solid;
+		}
+		.f-main{
+			border:3px black solid;
+			margin: 10px;
+			margin-left: 110px;
+			margin-right: 210px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="nav"></div>
+		<div class="nav"></div>
+	</div>
+	<div class="content">
+		<div class="aside">aside</div>
+		<div class="main">main</div>
+	</div>
+	<div class="footer">
+		<div class="f-aside">
+		f-aside			
+		</div>
+		<div class="f-menu">f-menu</div>
+		<div class="f-main">f-main</div>
+	</div>
+</body>
+</html>
