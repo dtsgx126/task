@@ -6,7 +6,7 @@
 	<style>
 		.content{
 			width: 800px;
-			margin:300px auto;
+			margin:150px auto;
 			border-top:2px solid #666;
 			border-bottom: 2px solid #666;
 			padding: 20px 0;
@@ -14,14 +14,17 @@
 		.aside{
 			float: right;
 			width: 250px;
-			height: 166.66px;
+			height: 166.66px;/*不加高度的话，为什么高度会比子元素img的height大？（子元素width已经宽度100%）*/
 			border-radius:10px;
 			overflow: hidden;
 			box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
 		}
 		.aside img{
-			width: 130%;
+			width: 100%;
 			border-radius:10px;
+		}
+		.main{
+			margin-right: 260px;
 		}
 		.head-i{
 			width: 50px;
@@ -35,16 +38,16 @@
 			width: 200%;
 		}
 		.info{
-			overflow: hidden;
+			display: table-cell;
 		}
 		.info>.head-i,.info>span{
-			float: left;
-			line-height: 50px;
 			margin-right: 15px;
+			display:inline-block;
+			vertical-align: middle;
 		}
 		.main p{
-			overflow:hidden; 
 			text-overflow:ellipsis;
+			overflow:hidden;
 			display:-webkit-box; 
 			-webkit-box-orient:vertical;
 			-webkit-line-clamp:2;  /*显示两行 white-space:normal为显示一行*/
