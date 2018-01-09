@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_536478_nb7ux6jywx9a4i.css">
 	<title>task14-2</title>
 	<style>
 		*{
@@ -10,10 +11,14 @@
 			list-style: none;
 			text-decoration: none;
 		}
+		/*body{
+			overflow: hidden;
+		}*/
 		.head{
 			margin-top: 100px;
 			padding-left: 50px;
 			min-width: 1000px;
+			padding-bottom: 100px;
 		}
 		.aside{
 			width: 450px;
@@ -39,10 +44,12 @@
 			width: 200px;
 			height: 200px;
 			margin-right: 50px;
+			border-radius: 50%;
+			overflow: hidden;
 		}
 		.i-header img{
-			width: 100%;
-			border-radius: 50%;
+			width: 200%;
+			/*border-radius: 50%;*/
 		}
 		.info>div{
 			display: inline-block;
@@ -51,6 +58,99 @@
 		.info h1{
 			font-size: 50px;
 			font-weight: 50;
+		}
+		.content{
+			padding-bottom: 50px;
+		}
+		.content p{
+			padding-top: 30px;
+		}
+		.content h2{
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+			width: 50%;
+			border-bottom: 1px solid #666;
+		}
+		.content h3{
+			font-weight: lighter;
+		}
+		.content h3 .time{
+			padding-left: 10px;
+			color: #666;
+		}
+		.main{
+			padding:50px 30px 50px 50px;
+			overflow: hidden;
+		}
+		.explain-box{
+			margin-left: 10px;
+			padding-left:100px;
+			border-left:1px solid black;
+			position: relative;
+			float: left;
+		}
+		.explain{
+			margin-top: -10px;
+		}
+		.empty{
+			width: 100%;
+			height: 30px;
+			border-left:1px solid black;
+			margin-top: 10px;
+			margin-left: 10px;
+			clear: both;
+		}
+		.content .empty:last-child{
+			border:none;
+		}
+		.main .icon-yuandian{
+			position: absolute;
+			top:-8px;
+			left: -13px;
+			font-size: 25px;
+		}
+		.footer{
+			padding:50px;
+		}
+		.f-right{
+			width: 500px;
+			float: right;
+		}
+		.f-right li{
+			line-height:36px;
+			font-size: 20px;
+			float: left;
+			width: 250px;
+			padding: 20px 0;
+		}
+		.f-right li i{
+			font-size: 20px;
+			color: black;
+			margin-right: 30px;
+		}
+		.f-right h2,.f-left h2{
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 20px;
+		}
+		.f-left{
+			margin-right: 700px;
+		}
+		.f-left h3{
+			font-weight: lighter;
+			padding-bottom: 13px;
+		}
+		.light{
+			color:gray;
+		}
+		.f-left h3 i{
+			font-size: 20px;
+			margin-right: 80px;
+		}
+		.f-left p{
+			padding-left: 100px;
+		}
+		.vol{
+			padding: 20px 0;
 		}
 	</style>
 </head>
@@ -66,7 +166,7 @@
 			</ul>
 		</div>
 		<div class="info">
-			<div class="i-header"><img src="http://p2.gexing.com/G1/M00/AB/BE/rBACE1ObvZfSAZTDAAAZzma-IW4811_200x200_3.jpg?recache=20131108" alt=""></div>			
+			<div class="i-header"><img src="http://f.hiphotos.baidu.com/image/pic/item/7dd98d1001e9390164e896f472ec54e737d19615.jpg" alt=""></div>			
 			<div>
 				<h1>David Smith</h1>
 				<h3>Graphic &amp; Web Designer</h3>
@@ -75,18 +175,88 @@
 	</div>
 	<div class="main">
 		<div class="content">
-			<h4>WORK EXPERIENCE</h4>
-			<hr>
+			<h2>EDUCATION</h2>
+			<div class="explain-box">
+				<i class="iconfont icon-yuandian"></i>
+				<div class="explain">					
+					<h3>Makepalces /<span class="time">2012-2013</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos neque officiis dignissimos vero illo, praesentium molestiae? Voluptates necessitatibus, fugiat quas eum, veniam ipsam vero magni minima consequatur, sunt ea!</p>
+				</div>				
+			</div>
+			<div class="empty"></div>
+			<div class="explain-box">
+				<i class="iconfont icon-yuandian"></i>
+				<div class="explain">					
+					<h3>Makepalces /<span class="time">2012-2013</span></h3>
 
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos neque officiis dignissimos vero illo, praesentium molestiae? Voluptates necessitatibus, fugiat quas eum, veniam ipsam vero magni minima consequatur, sunt ea!</p>
+				</div>				
+			</div>
+			<div class="empty"></div>
+			<div class="explain-box">
+				<i class="iconfont icon-yuandian"></i>
+				<div class="explain">					
+					<h3>Makepalces /<span class="time">2012-2013</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos neque officiis dignissimos vero illo, praesentium molestiae? Voluptates necessitatibus, fugiat quas eum, veniam ipsam vero magni minima consequatur, sunt ea!</p>
+				</div>				
+			</div>
+			<div class="empty"></div>
 		</div>
 		<div class="content">
-			<h4>EDUCATION</h4>
+			<h2>WORKDSAFDSA</h2>
+			<div class="explain-box">
+				<i class="iconfont icon-yuandian"></i>
+				<div class="explain">					
+					<h3>Makepalces /<span class="time">2012-2013</span></h3>
+					<h3 class="light">VEASFREATKEJGFDASF</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos neque officiis dignissimos vero illo, praesentium molestiae? Voluptates necessitatibus, fugiat quas eum, veniam ipsam vero magni minima consequatur, sunt ea!</p>
+				</div>				
+			</div>
+			<div class="empty"></div>
+			<div class="explain-box">
+				<i class="iconfont icon-yuandian"></i>
+				<div class="explain">					
+					<h3>Makepalces /<span class="time">2012-2013</span></h3>
+					<h3 class="light">VEASFREATKEJGFDASF</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos neque officiis dignissimos vero illo, praesentium molestiae? Voluptates necessitatibus, fugiat quas eum, veniam ipsam vero magni minima consequatur, sunt ea!</p>
+				</div>				
+			</div>
+			<div class="empty"></div>
+			<div class="explain-box">
+				<i class="iconfont icon-yuandian"></i>
+				<div class="explain">					
+					<h3>Makepalces /<span class="time">2012-2013</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos neque officiis dignissimos vero illo, praesentium molestiae? Voluptates necessitatibus, fugiat quas eum, veniam ipsam vero magni minima consequatur, sunt ea!</p>
+				</div>				
+			</div>
+			<div class="empty"></div>
 		</div>
+
 	</div>
 	<div class="footer">
-		<div class="f-right"></div>
-		<div class="f-left">			
+		<div class="f-right">
+			<h2>SKILLS</h2>	
+			<ul>
+				<li class="skill"><a href="#"><i class="iconfont icon-jiahao"></i></a>JAVASCRIPT</li>
+				<li class="skill"><a href="#"><i class="iconfont icon-jiahao"></i></a>JAVASCRIPT</li>
+				<li class="skill"><a href="#"><i class="iconfont icon-jiahao"></i></a>JAVASCRIPT</li>
+				<li class="skill"><a href="#"><i class="iconfont icon-jiahao"></i></a>JAVASCRIPT</li>
+				<li class="skill"><a href="#"><i class="iconfont icon-jiahao"></i></a>JAVASCRIPT</li>
+				<li class="skill"><a href="#"><i class="iconfont icon-jiahao"></i></a>JAVASCRIPT</li>
+			</ul>		
 		</div>
+		<div class="f-left">
+			<h2>EXPALDAIFGDA</h2>
+			<div class="vol">
+				<h3><a href=""><i class="iconfont icon-jiahao"></i></a>Volunteer</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ipsam dolorem, doloremque veritatis quibusdam iste perspiciatis placeat, illum molestias sed possimus. Eos minus, non impedit pariatur est eaque saepe labore.</p>
+			</div>
+			<div class="vol">
+				<h3><a href=""><i class="iconfont icon-jiahao"></i></a>Volunteer</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ipsam dolorem, doloremque veritatis quibusdam iste perspiciatis placeat, illum molestias sed possimus. Eos minus, non impedit pariatur est eaque saepe labore.</p>
+			</div>
+		</div>
+
 	</div>
 </body>
 </html>
