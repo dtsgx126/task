@@ -7,7 +7,7 @@ li,a{
 	text-decoration: none;
 }
 .layout{
-	width: 1170px;
+	width: 1150px;
 	margin:0 auto;
 }
 #header{
@@ -73,4 +73,225 @@ li,a{
 	background: orange;
 	display: inline-block;
 	margin: 20px auto;
+}
+/*service开始*/
+.model{
+	padding: 100px;
+}
+.model h1,.model .center{
+	text-align: center;
+	margin: 0 auto;
+}
+.model .center{
+	font-weight: lighter;
+	color: #777;
+	opacity: 0.6;
+	margin: 20px 0 50px 0;
+}
+#main .ser-box .ser-main{
+	float: left;
+	width:350px;
+	margin-left: 25px;
+	font-size: 14px;
+	text-align: center;
+	color: #777;
+}
+#main .ser-main .ico-box{
+	width: 100px;
+	height: 100px;
+	background: orange;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+#main .ser-main .icon-shoppingcart{
+	display: inline-block;
+	font-size: 60px;
+	line-height: 100px;
+	color: white;
+}
+#main .ser-box{
+	margin-left: -25px;
+}
+#main .ser-box:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+#main .ser-main h2{
+	margin: 20px auto;
+}
+/*port开始*/
+.portfolio{
+	background: #f7f7f7;
+	overflow: hidden;
+}
+.portfolio .port-box .port-main{
+	width: 350px;
+	float: left;
+	margin-left: 25px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.portfolio .port-box .port-main h2{
+	margin-top:20px;
+}
+.portfolio .port-box .port-main p{
+	padding-bottom: 20px;
+	color: #777;
+}
+.portfolio .port-box .img-box img{
+	width: 100%;
+}
+.portfolio .port-box{
+	margin-left: -25px;
+}
+.about .img-box{
+	/*position: relative;
+	z-index: 100!important;*/
+	width: 150px;
+	height: 150px;
+	border:10px solid #f1f1f1;
+	overflow: hidden;
+	border-radius:50%;
+	margin: 0 38px;
+	float: left;
+	
+}
+.about .text{
+	width: 450px;
+	text-align: right;
+	float: left;	
+}
+.about .order:nth-child(even) .text{
+	text-align: left!important;
+}
+.about .order:last-child{
+	padding-bottom: 0;
+}
+.about .img-box img{
+	width: 100%;
+}
+.about .empty{
+	float: left;
+	width: 450px;
+	height: 1px;
+}
+.about .text h3{
+	margin-bottom: 15px;
+}
+.about .order{
+	padding-bottom:100px;
+}
+.about .order:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.line{
+	position: relative;
+}
+.about .line:after{
+	z-index:-1!important;
+	content: "";
+	position: absolute;
+	width: 2px;
+	background: #f1f1f1;
+	top:0;
+	bottom: 0;
+	margin-left:575px
+}
+/*amazing开始*/
+.amazing{
+	background: #f1f1f1;
+	text-align: center;
+}
+.amazing .info-box{
+	margin-left: -201px;
+	margin-top: 50px;
+}
+.amazing .info-box:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.amazing .info{
+	width: 250px;
+	float: left;
+	margin-left: 200px;
+}
+.amazing .info .img-box{
+	width: 250px;
+	margin: 0 auto;
+	border:5px solid white;
+	border-radius:50%;
+	overflow: hidden;
+	margin-bottom: 20px;
+
+}
+.amazing .info img{
+	width: 100%;
+	vertical-align: middle;
+}
+.amazing .info h4{
+	color: #777;
+	font-weight: lighter;
+	margin-bottom: 10px;
+}
+.amazing .info .icon-tian7_facebook{
+	font-size:35px;
+	margin: 0 5px;
+	color: black;
+}
+.amazing .ico-box{
+	text-align: center;
+}
+.amazing .iconfont:hover{
+	color: orange;
+}
+.amazing .footer{
+	width: 800px;
+	margin: 40px auto;
+	color: #777;
+}
+
+.partner i{
+	font-size: 40px;
+	color: #777;
+	vertical-align: middle;
+}
+.partner a{
+	padding: 10px;
+	margin:10px 80px;
+}
+.partner{
+	text-align: center;
+	padding: 60px ;
+}
+
+.contact{
+	background: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/map-image.png);
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.contact input{
+	width: 50%;
+}
+.area-box{
+	width:500px;
+	float: right;
+}
+.area-box:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.textarea{
+	width: 100%;
+	display: block;
+	float: right;
+}
+.contact .input-box{
+	margin-right: 550px;
 }
