@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0
+}
+li,a{
+	list-style: none;
+	text-decoration: none;
+}
+.layout{
+	width: 1170px;
+	margin:0 auto;
+}
+#header{
+	background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg);
+	text-align: center;
+	padding-bottom: 150px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+.nav-box{
+	padding: 20px 10px;
+}
+.nav-box:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+#start{
+	color:#fed136;
+	font-size: 24px;
+	float: left;
+	display: inline-block;
+}
+#header .nav{
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right:300px;
+	line-height: 31px;
+}
+#header .nav li{
+	float: right;
+}
+#header .nav:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+#header .nav li a{
+	color: #fff;
+	line-height: 31x;
+	margin-left: 20px;
+}
+#header .content{
+	font-size: 50px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 60px;
+	padding: 100px;
+}
+#header .content em{
+	font-weight: lighter;
+	font-size: 30px;
+}
+#header .btn{
+	color: #fff;
+	padding:20px 30px;
+	font-size: 20px;
+	background: orange;
+	display: inline-block;
+	margin: 20px auto;
+}
