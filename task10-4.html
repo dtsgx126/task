@@ -6,10 +6,7 @@
 	<style>
 		.nav{
 			width: 40%;
-			background: #f1f1f1;
 			margin: 0 auto;
-			border-radius: 3px;
-
 		}
 		ul:after{
 			display: block;
@@ -20,14 +17,23 @@
 			margin: 0;
 			padding:0;
 			box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.16);
+			border-radius: 3px;
+			background: #f1f1f1;
 		}
 		.nav li{
 			float: left;
 			list-style: none;
-			padding:10px 15px;
 			position: relative;
 		}
-		.nav li:hover{
+		.nav-h li a{
+			padding:8px 16px;
+			display: block;
+		}
+		.nav-h li:first-child a{
+			border-top-left-radius:3px;
+			border-bottom-left-radius:3px;
+		}
+		.nav-h>li a:hover{
 			background: #ccc;
 		}
 		a{
@@ -42,29 +48,33 @@
 			position: absolute;
 			top: 100%;
 			left: 0;
+			background:#fff;
+			/*padding:0 15px; */
 			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 			min-width: 160px;
-			z-index: 1;
+			z-index:99;
 		}
 		.option a{
 			display: block;
-			padding: 8px 4px;
+			padding: 8px 16px;
 		}
 		.option a:hover{
 			background: #ccc;
 		}
+		
 	</style>
 </head>
 <body>
 	<div class="nav">
-		<ul>
+		<ul class="nav-h">
 			<li><a href="">首页</a></li>
 			<li><a href="">作品</a></li>
-			<li class="option-li"><a href="">更多</a>
+			<li class="option-li">
+				<a href="">更多</a>
 				<div class="option">
-					<a href="">github</a>
-					<a href="">知乎</a>
+					<a href="">Github</a>
 					<a href="">博客</a>
+					<a href="">知乎</a>
 				</div>
 			</li>
 		</ul>
