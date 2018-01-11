@@ -6,10 +6,7 @@ li,a{
 	list-style: none;
 	text-decoration: none;
 }
-.layout{
-	width: 1150px;
-	margin:0 auto;
-}
+
 #header{
 	background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg);
 	text-align: center;
@@ -37,7 +34,7 @@ li,a{
 	float: right;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right:300px;
+	margin-right:200px;
 	line-height: 31px;
 }
 #header .nav li{
@@ -53,6 +50,10 @@ li,a{
 	color: #fff;
 	line-height: 31x;
 	margin-left: 20px;
+	transition: all 0.5s;
+}
+#header .nav li a:hover{
+	color: #fed136;
 }
 #header .content{
 	font-size: 50px;
@@ -75,8 +76,10 @@ li,a{
 	margin: 20px auto;
 }
 /*service开始*/
+
 .model{
 	padding: 100px;
+	min-width: 1149px;
 }
 .model h1,.model .center{
 	text-align: center;
@@ -103,7 +106,7 @@ li,a{
 	margin: 0 auto;
 	border-radius: 50%;
 }
-#main .ser-main .icon-shoppingcart{
+#main .ser-main .iconfont{
 	display: inline-block;
 	font-size: 60px;
 	line-height: 100px;
@@ -145,9 +148,27 @@ li,a{
 .portfolio .port-box{
 	margin-left: -25px;
 }
+.portfolio .hover{
+	position: absolute;
+	width: 350px;
+	height: 253px;
+	text-align: center;
+	cursor: pointer;
+	background-color: rgba(254, 209, 54, .9);
+	opacity: 0;
+	transition: all 1s;
+}
+.hover:hover{
+	opacity: 0.8;
+
+}
+.portfolio .hover i{
+	font-size: 50px;
+	line-height: 253px;
+	vertical-align: middle;
+	color: #fff;
+}
 .about .img-box{
-	/*position: relative;
-	z-index: 100!important;*/
 	width: 150px;
 	height: 150px;
 	border:10px solid #f1f1f1;
@@ -237,7 +258,7 @@ li,a{
 	font-weight: lighter;
 	margin-bottom: 10px;
 }
-.amazing .info .icon-tian7_facebook{
+.amazing .info .iconfont{
 	font-size:35px;
 	margin: 0 5px;
 	color: black;
@@ -275,23 +296,87 @@ li,a{
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.contact input{
-	width: 50%;
-}
 .area-box{
-	width:500px;
+	border-radius:10px;
+	box-sizing: border-box;
+	text-align: center;
+	width:50%;
 	float: right;
 }
-.area-box:after{
+form:after,.input-box:after{
 	display: block;
 	content: "";
 	clear: both;
 }
-.textarea{
-	width: 100%;
-	display: block;
-	float: right;
+.area-box textarea{
+	vertical-align: middle;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	font-size: 14px;
+	padding: 10px;
+	font-weight: bold;
+	width: 90%;
+	color: #777;
 }
 .contact .input-box{
-	margin-right: 550px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	box-sizing: border-box;
+}
+.contact .input-box input{
+	width: 80%;
+	padding:25px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom:31px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	color: #777;
+}
+.contact input[type=submit]{
+	display: block;
+	font-size: 30px;
+	background-color: #f6bf01;
+	padding: 15px 20px;
+	cursor: pointer;
+	border:none;
+	border-radius: 5px;
+	color: #fff;
+	margin:0 auto;
+	position: relative;
+	top:25px;
+}
+.contact .input-box input:last-child{
+	margin-bottom: 0;
+}
+
+.footer{
+	text-align: center;
+	font-size: 14px;
+	color: #777;
+}
+.footer .ico{
+	display: inline-block;
+	margin: 20px 150px;
+
+}
+.footer .ico i{
+	font-size: 40px;
+	color: black;
+	vertical-align: middle;
+	margin: 0 10px;
+	transition: all .3s;
+}
+.footer .ico i:hover{
+	color: #fed136;
+}
+.footer .right a{
+	color: #fed136;
+	margin: 0 10px;
+}
+.footer .right a:hover{
+	text-decoration: underline;
 }
