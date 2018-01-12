@@ -13,8 +13,9 @@ li,a{
 	padding-bottom: 150px;
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
-
+	background-repeat:no-repeat;
+	margin:0 auto;
+	min-width: 1349px;
 }
 .nav-box{
 	padding:20px 10px;
