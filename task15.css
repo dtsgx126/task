@@ -17,7 +17,7 @@ li,a{
 
 }
 .nav-box{
-	padding: 20px 10px;
+	padding:20px 10px;
 }
 .nav-box:after{
 	display: block;
@@ -94,7 +94,7 @@ li,a{
 #main .ser-box .ser-main{
 	float: left;
 	width:350px;
-	margin-left: 25px;
+	margin-left:50px;
 	font-size: 14px;
 	text-align: center;
 	color: #777;
@@ -113,7 +113,7 @@ li,a{
 	color: white;
 }
 #main .ser-box{
-	margin-left: -25px;
+	margin-left: -51px;
 }
 #main .ser-box:after{
 	display: block;
@@ -131,7 +131,7 @@ li,a{
 .portfolio .port-box .port-main{
 	width: 350px;
 	float: left;
-	margin-left: 25px;
+	margin-left:50px;
 	text-align: center;
 	margin-bottom: 15px;
 }
@@ -146,7 +146,7 @@ li,a{
 	width: 100%;
 }
 .portfolio .port-box{
-	margin-left: -25px;
+	margin-left: -51px;
 }
 .portfolio .hover{
 	position: absolute;
@@ -174,7 +174,7 @@ li,a{
 	border:10px solid #f1f1f1;
 	overflow: hidden;
 	border-radius:50%;
-	margin: 0 38px;
+	margin: 0 39px;
 	float: left;
 	
 }
@@ -219,7 +219,7 @@ li,a{
 	background: #f1f1f1;
 	top:0;
 	bottom: 0;
-	margin-left:575px
+	margin-left:573px
 }
 /*amazing开始*/
 .amazing{
@@ -227,7 +227,7 @@ li,a{
 	text-align: center;
 }
 .amazing .info-box{
-	margin-left: -201px;
+	margin-left: -1px;
 	margin-top: 50px;
 }
 .amazing .info-box:after{
@@ -240,8 +240,11 @@ li,a{
 	float: left;
 	margin-left: 200px;
 }
+.amazing .info:first-child{
+	margin-left: 0;
+}
 .amazing .info .img-box{
-	width: 250px;
+	width: 200px;
 	margin: 0 auto;
 	border:5px solid white;
 	border-radius:50%;
@@ -322,8 +325,9 @@ form:after,.input-box:after{
 .contact .input-box{
 	float: left;
 	width: 50%;
-	text-align: center;
+	text-align: right;
 	box-sizing: border-box;
+	padding-right: 10px;
 }
 .contact .input-box input{
 	width: 80%;
@@ -351,6 +355,10 @@ form:after,.input-box:after{
 }
 .contact .input-box input:last-child{
 	margin-bottom: 0;
+}
+.contact>h1{
+	color: white;
+	font-size: 40px;
 }
 
 .footer{
