@@ -28,3 +28,7 @@
 * 企业综合
 
 [task15](https://dtsgx126.github.io/task/task15.html)
+
+* 小练习
+
+[漂亮的登录页](https://dtsgx126.github.io/task/login.html)

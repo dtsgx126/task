@@ -1,0 +1,154 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	font-size: 16px;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	background: url(http://zegendary.coding.me/project/mission/%E6%BC%82%E4%BA%AE%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86/background.png);
+}
+.wrap{
+	text-align: center;	
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+.wrap h1{
+	font-size: 25px;
+    font-family: 微软雅黑;
+ 	color: rgb(98,94,91);
+ 	font-weight: lighter;
+ 	padding:;
+}
+.wrap h1 .ly{
+	font-size: 30px;
+	font-family: "Brush Script Std";
+	font-weight: bolder;
+}
+.wrap form{
+	width: 260px;
+	height: 260px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	display: flex;
+	background:#e4e1dc;
+	padding: 30px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 2px 1px #aaaaaa, inset 0px 1px 1px rgba(255,255,255,0.7);
+	flex-direction: column;
+	justify-content: space-between;
+}
+.wrap form label,.wrap form a{
+	width: 260px;
+	text-align: left;
+	height: 40px;
+	display: inline-block;
+}
+.wrap .info{
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: rgb(98,94,91);
+	background: #e1dcd8;
+	border-radius: 5px;
+}
+.wrap .info i{
+	font-size: 18px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.wrap .info input{
+	width: 190px;
+	height: 40px;
+	padding:0 35px;
+	outline: none;
+	font-size: 16px;
+	border:none;
+	border-radius: 5px;
+	background: #e1dcd8;
+	box-shadow:0px 1px 1px rgba(255,255,255,0.7), inset 0px 2px 5px #aaaaaa;
+}
+.wrap .info input:focus{
+	border: none;
+	outline: none;
+	background: #f5f2ef;
+}
+.wrap .right{
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	color: rgb(98,94,91);
+	font-weight: bold;
+}
+
+.wrap .right i{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	font-size: 24px;
+	transform: translateY(-50%);
+	padding: 1px 2px;
+	border:1px solid #ccc;
+	cursor: pointer;
+	border-radius: 4px;	
+	color: #bbc0aa;
+	z-index: 5;
+}
+.wrap .right input:hover + .icon-danduduihao{
+	color: #74884a;
+	opacity: 0.7;
+}
+.wrap .right input:checked + .icon-danduduihao{
+	color: #74884a;
+	opacity: 1;
+}
+.wrap .right input{
+	margin-right:10px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	opacity: 0;
+	z-index: 6;
+}
+.wrap form>a{
+	font-size: 18px;
+    font-family: 黑体;
+    color: rgb(152,142,135);
+    text-decoration: none;
+    line-height: 40px;
+}
+.wrap input[type="submit"]{
+	font-size: 18px;
+	color: #fff;
+	height: 40px;
+	background: -webkit-gradient(
+			linear, left top, left bottom,
+			from(#94aa64),
+			color-stop(0.50, #7a924a),
+			to(#607738));
+	border-radius: 5px;
+    border: 1px solid #7d8862;
+    cursor: pointer;
+}
+.wrap input[type="submit"]:hover{
+	opacity: 0.7;
+}
+.company>p{
+	color:rgb(98,94,91);
+	font-family: 黑体;
+	text-align: center;
+}
+.company>p a{
+	text-decoration: none;
+	font-size: 16px;
+    font-family: 黑体;
+    color: rgb(152,142,135);
+    text-decoration: none;
+}
