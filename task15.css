@@ -79,8 +79,9 @@ li,a{
 /*service开始*/
 
 .model{
+	margin:0 auto;
 	padding: 100px;
-	min-width: 1149px;
+	width: 1149px;
 }
 .model h1,.model .center{
 	text-align: center;
@@ -273,7 +274,7 @@ li,a{
 .amazing .iconfont:hover{
 	color: orange;
 }
-.amazing .footer{
+.amazing .amz-footer{
 	width: 800px;
 	margin: 40px auto;
 	color: #777;
@@ -291,6 +292,7 @@ li,a{
 .partner{
 	text-align: center;
 	padding: 60px ;
+	min-width: 1229px;
 }
 
 .contact{
@@ -299,6 +301,18 @@ li,a{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	padding-top: 100px;
+	min-width: 1349px;
+}
+.contact h1,.contact .center{
+	text-align: center;
+	margin: 0 auto;
+}
+.contact .center{
+	font-weight: lighter;
+	color: #777;
+	opacity: 0.6;
+	margin: 20px 0 50px 0;
 }
 .area-box{
 	border-radius:10px;
@@ -307,6 +321,19 @@ li,a{
 	width:50%;
 	float: right;
 }
+form{
+	margin:0 auto;
+	padding: 100px;
+	width: 1149px;
+}
+
+.model{
+	margin:0 auto;
+	padding: 100px;
+	width: 1149px;
+}
+
+
 form:after,.input-box:after{
 	display: block;
 	content: "";
@@ -366,6 +393,7 @@ form:after,.input-box:after{
 	text-align: center;
 	font-size: 14px;
 	color: #777;
+	min-width: 1349px;
 }
 .footer .ico{
 	display: inline-block;
@@ -384,7 +412,7 @@ form:after,.input-box:after{
 }
 .footer .right a{
 	color: #fed136;
-	margin: 0 10px;
+	margin:0 10px;
 }
 .footer .right a:hover{
 	text-decoration: underline;
