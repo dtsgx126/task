@@ -31,4 +31,5 @@
 
 * 小练习
 
-[漂亮的登录页](https://dtsgx126.github.io/task/login.html)
+[漂亮的登录页](https://dtsgx126.github.io/task/login.html)，
+[魔兽世界](https://dtsgx126.github.io/task/warcraft.html)
