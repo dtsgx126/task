@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>water</title>
+	<style>
+	*{
+		margin:0;
+		padding: 0;
+	}
+	body{
+		padding:0 100px;
+		background: #ccc;
+	}
+		.content{
+			position: relative;
+			margin:0 auto;			
+		}
+		.content:after{
+			display: block;
+			content: '';
+			clear: both;
+		}
+		.content .item{
+			position: absolute;
+			transition: all 1s;
+			margin: 5px;
+			overflow: hidden;
+			box-shadow:2px 2px  5px gray;
+			text-align: center;
+			background:#ddd;
+			border-radius: 5px;			
+		}
+		.content .item img{
+			width: 350px;
+			display: inline-block;
+		}
+		.load{
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="item h2"><img src="" alt=""></div>
+		<div class="item h1"><img src="" alt=""></div>
+		<div class="item h1"><img src="" alt=""></div>
+		<div class="item h4"><img src="" alt=""></div>
+		<div class="item h3"><img src="" alt=""></div>
+		<div class="item h2"><img src="" alt=""></div>
+	</div>
+	<div class="load">我应该是看不见的</div>
+	<!-- <script src="$.js"></script> -->
+	<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+		var girls=[
+		"http://a.hiphotos.baidu.com/image/pic/item/b90e7bec54e736d1f7de1fb498504fc2d46269b9.jpg",
+		"http://b.hiphotos.baidu.com/image/pic/item/9c16fdfaaf51f3de5560275391eef01f3a297933.jpg",
+		"http://b.hiphotos.baidu.com/image/pic/item/6a63f6246b600c3306832dc8184c510fd9f9a13c.jpg",
+		"http://f.hiphotos.baidu.com/image/pic/item/14ce36d3d539b600afa9feb7eb50352ac65cb74f.jpg",
+		"http://c.hiphotos.baidu.com/image/pic/item/7aec54e736d12f2ed3528d1f4dc2d5628535687d.jpg",
+		"http://h.hiphotos.baidu.com/image/pic/item/314e251f95cad1c8702729237d3e6709c93d5112.jpg",
+		"http://e.hiphotos.baidu.com/image/pic/item/ac4bd11373f08202062f353f49fbfbedab641b74.jpg",
+		"http://c.hiphotos.baidu.com/image/pic/item/f636afc379310a55515bfd76b54543a982261030.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/d6ca7bcb0a46f21fee8f99d6f4246b600d33aef8.jpg",
+		"http://e.hiphotos.baidu.com/image/pic/item/5882b2b7d0a20cf4bd2028d674094b36acaf9903.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/fcfaaf51f3deb48fc4cedcdff21f3a292df5780f.jpg",
+		"http://f.hiphotos.baidu.com/image/pic/item/09fa513d269759eeb059f1d9b0fb43166d22df93.jpg",
+		"http://f.hiphotos.baidu.com/image/pic/item/b7fd5266d0160924ae48433fd10735fae6cd34a0.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/342ac65c1038534343cc159d9013b07eca80880f.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/203fb80e7bec54e7e6be8429bc389b504fc26ab3.jpg",
+		"http://b.hiphotos.baidu.com/image/pic/item/d8f9d72a6059252d5defee04369b033b5bb5b932.jpg",
+		"http://b.hiphotos.baidu.com/image/pic/item/b8389b504fc2d5627c886ee4e51190ef76c66c33.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/4e4a20a4462309f7382f0a12700e0cf3d7cad66a.jpg",
+		"http://c.hiphotos.baidu.com/image/pic/item/09fa513d269759ee673682cfb0fb43166d22df54.jpg",
+		"http://e.hiphotos.baidu.com/image/pic/item/77c6a7efce1b9d16f1902f65f1deb48f8c54645a.jpg",
+		"http://d.hiphotos.baidu.com/image/pic/item/55e736d12f2eb938e81944c7d0628535e5dd6f8a.jpg",
+		"http://f.hiphotos.baidu.com/image/pic/item/71cf3bc79f3df8dc8478d0d7ce11728b4710282a.jpg",
+		"http://h.hiphotos.baidu.com/image/pic/item/58ee3d6d55fbb2fbdc03f8154d4a20a44623dc89.jpg",
+		"http://h.hiphotos.baidu.com/image/pic/item/d62a6059252dd42a2f4f7db4013b5bb5c9eab86e.jpg",
+		"http://c.hiphotos.baidu.com/image/pic/item/810a19d8bc3eb135298010bba41ea8d3fd1f446e.jpg",
+		"http://c.hiphotos.baidu.com/image/pic/item/a08b87d6277f9e2f6d7483081d30e924b899f369.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/08f790529822720eac324afa79cb0a46f21fab36.jpg",
+		"http://c.hiphotos.baidu.com/image/pic/item/1ad5ad6eddc451da83efedf4b4fd5266d0163297.jpg",
+		"http://a.hiphotos.baidu.com/image/pic/item/a9d3fd1f4134970a20b1863d97cad1c8a6865de5.jpg",
+		"http://b.hiphotos.baidu.com/image/pic/item/ac6eddc451da81cb58bbc5715766d01609243128.jpg"]
+		for (var i = 0; i <$('.item').length; i++) {
+			$($('.item')[i]).find('img').attr('src',girls[i])
+		}
+		$($('.item')[0]).find('img').load(waterfull)
+		$(window).on('resize',function (argument) {
+			waterfull()
+		})
+		
+		function waterfull() {
+			var colLength=parseInt($('.content').width()/$('.item').width())
+			var newItemWidth=($('.content').width()/colLength)-10
+			$('.item').width(newItemWidth)
+			itemArr=[]
+			for (var i = 0; i < colLength; i++) {
+				itemArr[i]=0
+			}
+			$('.item').each(function (argument) {
+				var minValue=Math.min.apply(null,itemArr)
+				var minIndex=itemArr.indexOf(minValue)
+				$(this).css({	
+					top:itemArr[minIndex],
+					left:(newItemWidth+10) * minIndex
+				})
+
+				itemArr[minIndex]+=$(this).outerHeight(true)
+			})
+			$('.content').height(Math.max.apply(null,itemArr))
+			console.log($('.content'))
+
+		}
+
+		var nodes=$('.content .item')
+			nodes.each(function(argument) {
+				isLook(this)
+			})
+		page=7
+		num=3
+		$(window).on('scroll',function() {
+			var load=$('.load')[0]
+			isLook(load)
+			if (isLook(load)) {
+
+				againPlace(page,num)
+			}
+			
+		})
+		
+		function againPlace(page,num) {
+			
+			var newGirls=girls.splice(page,num)
+			page+=num+1
+			if (newGirls.length<3) { return}
+			console.log(newGirls)
+			var newHtml=''
+			for (var i = 0; i < num; i++) {
+				var random=Math.floor(Math.random()*5)+1
+				var src=newGirls[i]
+				newHtml+='<div class="item h'+random+'"><img src="'+src+'" alt=""></div>'
+				$('.content').append(newHtml)
+			}
+			waterfull()
+			$('.content').height(Math.max.apply(null,itemArr))
+		}
+
+		function isLook(node) {
+			if (
+				$(node).offset().top < $(window).height()+$(window).scrollTop() && 
+			    $(node).offset().top > $(window).scrollTop()
+			) {
+			 	return true
+			}
+			else{
+				return false
+			}
+		}
+
+	</script>
+</body>
+</html>
