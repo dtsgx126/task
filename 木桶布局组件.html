@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mybarrels</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			box-sizing: border-box;
+		}
+		.img-preview{
+			margin: 0 auto;
+			width:100%;
+			padding:0 10px;
+		}
+		.img-row{
+			padding-bottom: 10px;
+			width:1200px;
+			margin: 0 auto;
+		}
+		.img-row:after{
+			display: block;
+			content: '';
+			clear: both;
+		}
+		.img-box{
+			float: left;
+			padding:0 5px;
+		}
+		.img-box>img{		
+			/*height:400px;*/
+			padding-left: 0;
+		}
+		#load{
+			opacity: 0;
+		}
+		/*.gotop{
+			position:fixed;
+			left: 10px;
+			bottom: 10px;
+			background:gray;
+			font-size: 20px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			border-radius: 3px;
+			padding:3px;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- <div class="btn gotop">回到顶部</div> -->
+	<div class="img-preview">
+		<div class="img-row">
+		</div>
+		
+	</div>
+	<div id="load">我是看不见的</div>	
+		
+	<script src="$.js"></script>
+	<script>
+		function Barrel($ct) {
+			this.$ct=$ct
+			this.rowList=[]
+			this.rowWidth=0
+			this.ctWidth=$ct.find('.img-row').width()
+			this.baseHeight=300
+			this.page=2
+			this.preLoad();
+			this.lazy();
+
+		}
+		Barrel.prototype={
+			getData:function(num) {
+				var _this=this
+				_this.page++
+				var data=[]
+				$.ajax({
+					type: 'post',
+				    url: 'http://route.showapi.com/197-1',
+				    dataType: 'json',
+				    async:false,
+				    data: {
+				        "showapi_appid": '60984',
+				        "showapi_sign": '811274dcde6848ff90df86abbf4c214a',  
+				        "num":num,
+				        "page":_this.page,
+				        "rand":"5"
+				    }
+				}).done(function (ret) {
+					var retData=ret.showapi_res_body.newslist				
+					for (var i = 0; i < retData.length; i++) {
+						data[i]=retData[i].picUrl
+					}
+					
+				})
+				return data
+			},
+
+			preLoad:function() {
+				var urlArr=this.getData(10)	
+				var _this=this	
+				$.each(urlArr,function(argument) {
+					var img=new Image()
+					img.src=this
+					img.onload=function (argument) {
+						var orginWidth=img.width
+						var	orginHeight=img.height
+						var	ratio=orginWidth/orginHeight
+						var imgInfo={
+							target:$(this),
+							intWidth:_this.baseHeight*ratio,
+							ratio:ratio
+						}
+						_this.render(imgInfo)
+					}
+				})			
+			},
+			
+			render:function(imgInfo) {
+				var _this=this
+				_this.rowWidth+=imgInfo.intWidth
+				_this.rowList.push(imgInfo)
+				var rowWidth=_this.rowWidth
+				var ctWidth=_this.ctWidth
+				
+				if( rowWidth > ctWidth){
+					// console.log(rowList)
+					var lastImg=this.rowList.pop()
+
+					_this.createRow(this.rowList)
+
+					this.rowList=[]
+					this.rowList.push(lastImg)
+					this.rowWidth=this.rowList[0].intWidth			
+				}
+			},
+			createRow:function(rowList) {
+				var ct=$('<div class="img-row"></div>')
+				var ctWidth=this.ctWidth
+				var baseHeight=this.baseHeight
+				var rowWidth=0
+				for (var i = 0; i < rowList.length; i++) {
+					rowWidth+=rowList[i].intWidth
+				}
+				var padding=10*rowList.length
+				var lastHeight=((ctWidth-padding)*baseHeight)/rowWidth
+				for (var i = 0; i < rowList.length; i++) {
+					var imgBox=$('<div class="img-box"></div>')
+					var $img=rowList[i].target
+					$img.height(lastHeight)
+
+					imgBox.append($img)
+					ct.append(imgBox)
+				}
+				
+				this.$ct.append(ct)
+				
+			},
+
+			isLook:function(node) {
+				var $node=node
+				
+				if ($node.offset().top > $(window).scrollTop() && 
+					$node.offset().top < $(window).scrollTop()+$(window).height()) {
+					return true
+				}
+			},
+			lazy:function(argument) {
+				var _this=this
+				$(window).on('scroll',function (argument) {
+					if (_this.isLook($('#load'))) {
+						_this.preLoad()
+					}
+				})
+			}
+
+		}
+		var barrel = new Barrel($('.img-preview'));
+
+	</script>
+	<!-- <script>
+		function GoTop(ct) {
+			this.ct=ct
+			this.createNode()			
+		}
+		GoTop.prototype={
+			createNode:function (argument) {
+				var _this=this
+				var target=$('<div class="btn gotop">回到顶部</div>')
+				target.css({
+					'position':'fixed',
+					'left':' 10px',
+					'bottom': '10px',
+					'background':'gray',
+					'font-size': '20px',
+					'border': '1px solid #ccc',
+					'cursor': 'pointer',
+					'border-radius': '3px',
+					'padding':'3px',
+					'transition':'all 1s'
+				})
+				_this.bindEvent(target)
+				_this.ct.append(target)
+
+			},
+			bindEvent:function(target) {
+				
+				console.log(target)
+				target.on('click',function(argument) {
+					// $(window).scrollTop(0)
+					$('html,body').animate({scrollTop:0},1000)
+					console.log('aa')
+				})
+			}
+
+		}
+		new GoTop($('body'))
+	</script> -->
+</body>
+</html>
