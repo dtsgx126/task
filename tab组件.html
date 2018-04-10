@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tab组件</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    .tab{
+      width: 600px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    .tab>.btn-group{
+      width: inherit;
+    }
+    .tab>.btn-group:after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .tab>.btn-group li{
+      float: left;
+      cursor: pointer;
+      width: 100px;
+      height:50px;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-left: none;
+      text-align: center;
+      line-height: 50px;
+    }
+    .active{
+      border-bottom: none!important;
+    }
+    .content p{
+      display: none;
+      text-align: center;
+      line-height: 100px;
+    }
+    .content :first-child{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab">
+    <ul class="btn-group">
+      <li class="active">按钮1</li>
+      <li>按钮2</li>
+      <li>按钮3</li>
+    </ul>
+    <div class="content">
+      <p>内容1</p>
+      <p>内容2</p>
+      <p>内容3</p>
+    </div>
+  </div>
+
+  <script src="$.js"></script>
+  <script>
+    function Tab($ct) {
+       this.$ct=$ct
+       this.bind()
+    }
+    Tab.prototype.bind = function() {
+        var _this=this
+        this.$ct.find('.btn-group').on('click',function(e) {
+          e.stopPropagation()
+          if (e.target.className=='btn-group') {return}
+          var index=$(this).children().index(e.target)          
+          $(e.target).siblings().removeClass()
+          $(e.target).addClass('active')
+          _this.$ct.find('.content p').hide().eq(index).show()
+        })
+    };
+    new Tab($('.tab'))
+  </script>
+</body>
+</html>
