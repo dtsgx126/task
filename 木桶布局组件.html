@@ -36,21 +36,9 @@
 		#load{
 			opacity: 0;
 		}
-		/*.gotop{
-			position:fixed;
-			left: 10px;
-			bottom: 10px;
-			background:gray;
-			font-size: 20px;
-			border: 1px solid #ccc;
-			cursor: pointer;
-			border-radius: 3px;
-			padding:3px;
-		}*/
 	</style>
 </head>
 <body>
-	<!-- <div class="btn gotop">回到顶部</div> -->
 	<div class="img-preview">
 		<div class="img-row">
 		</div>
@@ -58,7 +46,7 @@
 	</div>
 	<div id="load">我是看不见的</div>	
 		
-	<script src="$.js"></script>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
 		function Barrel($ct) {
 			this.$ct=$ct
@@ -180,43 +168,6 @@
 		var barrel = new Barrel($('.img-preview'));
 
 	</script>
-	<!-- <script>
-		function GoTop(ct) {
-			this.ct=ct
-			this.createNode()			
-		}
-		GoTop.prototype={
-			createNode:function (argument) {
-				var _this=this
-				var target=$('<div class="btn gotop">回到顶部</div>')
-				target.css({
-					'position':'fixed',
-					'left':' 10px',
-					'bottom': '10px',
-					'background':'gray',
-					'font-size': '20px',
-					'border': '1px solid #ccc',
-					'cursor': 'pointer',
-					'border-radius': '3px',
-					'padding':'3px',
-					'transition':'all 1s'
-				})
-				_this.bindEvent(target)
-				_this.ct.append(target)
 
-			},
-			bindEvent:function(target) {
-				
-				console.log(target)
-				target.on('click',function(argument) {
-					// $(window).scrollTop(0)
-					$('html,body').animate({scrollTop:0},1000)
-					console.log('aa')
-				})
-			}
-
-		}
-		new GoTop($('body'))
-	</script> -->
 </body>
 </html>
