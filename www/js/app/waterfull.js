@@ -2,16 +2,13 @@ define(['jquery'],function($) {
 
 
 		function Water(ct) {
-					this.$ct=$(ct)
-					this.itemArr=[]
-					this.dataArr=[]
-					this.page=7
-					this.num=3
-					console.log(this.getData)
-					this.getData()			
-					this.bind()
-				}
-		Water.prototype={
+			this.$ct=$(ct)
+			this.page=7
+			this.num=3
+			this.getData()
+			this.bind()
+		}
+		Water.prototype = {
 			getData:function(argument) {
 					var self=this
 					$.ajax({
@@ -24,33 +21,35 @@ define(['jquery'],function($) {
 			     	})
 			},
 			init:function(dataArr) {
-					var self=this
-					for (var i = 0; i <$('.item').length; i++) {
-						$(this.$ct.find('.item')[i]).find('img').attr('src',dataArr[i])
-					}
-					this.$ct.find('.item img').on('load',self.waterfull(self))
+				var self=this
+				for (var i = 0; i <$('.item').length; i++) {
+					$(self.$ct.find('.item')[i]).find('img').attr('src',dataArr[i])
+				}
+				$('.item img').on('load',function() {
+					
+					self.waterfull(self)
+				})
 			},
-			bind:function() {
-					var self=this
-
-					$(window).on('resize',function () {
-						self.waterfull(self)                             //自适应
-					})
-
-					self.$ct.find('.load').on('click',function () {
-						self.againPlace(self.page,self.num)
-					})
+			bind:function(argument) {
+				var self=this
+				$(window).on('resize',function () {
+					self.waterfull(self)                             //自适应
+				})
+				self.$ct.find('.load').on('click',function () {
+					self.againPlace(self.page,self.num)
+				})
 			},
 			waterfull:function(self) {
-				var self=self
-				var colLength=parseInt(self.$ct.find('.content').width()/self.$ct.find('.item').width())
-				var newItemWidth=(self.$ct.find('.content').width()/colLength)-10
+				var self=this
+				var colLength=parseInt($('.water').width()/$('.item').width())
+				var newItemWidth=($('.water').width()/colLength)-10
+
 				self.$ct.find('.item').width(newItemWidth)
-				
+				this.itemArr=[]
 				for (var i = 0; i < colLength; i++) {
-					self.itemArr[i]=0
+					this.itemArr[i]=0
 				}
-				this.$ct.find('.item').each(function (argument) {
+				this.$ct.find('.item').each(function () {
 					var minValue=Math.min.apply(null,self.itemArr)
 					var minIndex=self.itemArr.indexOf(minValue)
 					$(this).css({	
@@ -59,14 +58,14 @@ define(['jquery'],function($) {
 					})
 					self.itemArr[minIndex]+=$(this).outerHeight(true)
 				})
-				var height=this.$ct.find('.content').height(Math.max.apply(null,self.itemArr))
+				this.$ct.height(Math.max.apply(null,self.itemArr))
 			},
-			againPlace:function(page,num) {
+			againPlace:function (page,num) {
 				var self=this
 				var newGirls=self.dataArr.splice(page,num)
 				self.page+=self.num+1
 				if (newGirls.length<3) {
-					this.$ct.find('.load').text('没有数据了') 
+					self.$ct.find('.load').text('没有数据了') 
 					return 
 				}
 				var newHtml=''
@@ -74,16 +73,14 @@ define(['jquery'],function($) {
 					var random=Math.floor(Math.random()*5)+1
 					var src=newGirls[i]
 					newHtml+='<div class="item h'+random+'"><img src="'+src+'" alt=""></div>'
-					$('.content').append(newHtml)
+					self.$ct.append(newHtml)
 				}
-				// this.$ct.find('.content .item:last-child').find('img').on('load',self.waterfull(self))
-				// this.$ct.find('.content').height(Math.max.apply(null,self.itemArr))
-				this.$ct.find('.content .item:last-child').find('img').on('load',function(argument) {
+				self.$ct.find('.item:last-child').find('img').on('load',function() {
 					self.waterfull(self)
-					self.$ct.find('.content').height(Math.max.apply(null,self.itemArr))
 				})
+				self.$ct.height(Math.max.apply(null,self.itemArr))
 			}
-		}
 
+		}
 	return Water
 })

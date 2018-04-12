@@ -7,18 +7,12 @@ define(['jquery'],function( $ ) {
           this.len=$(ct).find('.imgs li').length
           this.target=0
           this.isload=false
-          // this.demo=function(argument) {
-          //   console.log('aaa')
-          // }
-          this.demo()
           this.render()
           this.bind()
+          this.auto()
     }
 
     Carousel.prototype={
-      demo:function (argument) {
-        console.log('aaa')
-      },
       render:function(argument) {
           var self=this
           this.$ct.width(self.width).height(self.height).width($(window).width())
@@ -83,6 +77,12 @@ define(['jquery'],function( $ ) {
         var self=this
         var targetInt=target % self.$ct.find('.index li').length
         self.$ct.find('.index li').css('background','#fff').eq(targetInt).css('background','gray')
+      },
+      auto:function(argument) {
+        var self=this
+        setInterval(function(argument) {
+          self.$ct.find('.next').trigger('click')
+        },2000)
       }
     }
     return Carousel

@@ -11,11 +11,7 @@
       position: absolute;
       left:-300px;
     }
-    .look .imgs:after{
-      display: block;
-      content: '';
-      clear: both;
-    }
+
     .look .imgs img{
       float: left;
     }
@@ -58,33 +54,43 @@
 
 
     .water{
-        padding:10px 100px;
+        
+        padding-bottom: 100px;  
         background: #ccc;
       }
-    .water .content{
+    .water{
       position: relative;
       margin:0 auto;      
     }
-    .water .content:after{
+    .water-box{
+      padding:10px 100px;
+      background: #ccc;
+    }
+    .water:after{
       display: block;
       content: '';
       clear: both;
     }
-    .water .content .item{
+    .water .item{
       position: absolute;
       transition: all 1s;
       margin: 5px;
       overflow: hidden;
-      box-shadow:2px 2px  5px gray;
-      text-align: center;
-      background:#ddd;
-      border-radius: 5px;     
+      background: #ccc;
+      text-align: center;  
     }
-    .water .content .item img{
+    .water .item img{
+      display: block;
+      box-shadow:2px 2px  5px gray;
+      border-radius: 5px;
       width: 350px;
       display: inline-block;
     }
     .water .load{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
       width: 300px;
       border: 1px solid gray;
       margin: 10px auto;
@@ -93,7 +99,6 @@
       text-align: center;
       padding: 5px;
       cursor: pointer;
-      background: 
     }
     .gotop{
       position: fixed;
@@ -101,7 +106,8 @@
       bottom: 20px;
       font-size: 20px;
       cursor: pointer;
-      border: 1px solid black;
+      border: 1px solid #ddd;
+      box-shadow:2px 2px  5px gray;
       height: 50px;
       width: 50px;
       text-align: center;
