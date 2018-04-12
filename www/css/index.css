@@ -1,0 +1,111 @@
+*{
+      margin:0;
+      padding: 0;
+      list-style: none;
+    }
+    .look{
+      position: relative;
+      overflow: hidden;
+    }
+    .look .imgs{
+      position: absolute;
+      left:-300px;
+    }
+    .look .imgs:after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .look .imgs img{
+      float: left;
+    }
+    .look .pre,.look .next{
+      position: absolute;
+      top: 50%;
+      border:2px solid #fff;
+      font-size: 20px;
+      font-weight: bolder;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #fff;
+    }
+    .look .pre{
+      left: 30px;
+    }
+    .look .next{
+      right: 30px;
+    }
+    .look .index{
+      position: absolute;
+       bottom: 20px;
+       left: 50%;
+       transform: translateX(-50%);
+    }
+    .look .index li{
+      display: inline-block;
+      width: 20px;
+      height: 10px;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+
+    }
+
+
+    .water{
+        padding:10px 100px;
+        background: #ccc;
+      }
+    .water .content{
+      position: relative;
+      margin:0 auto;      
+    }
+    .water .content:after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .water .content .item{
+      position: absolute;
+      transition: all 1s;
+      margin: 5px;
+      overflow: hidden;
+      box-shadow:2px 2px  5px gray;
+      text-align: center;
+      background:#ddd;
+      border-radius: 5px;     
+    }
+    .water .content .item img{
+      width: 350px;
+      display: inline-block;
+    }
+    .water .load{
+      width: 300px;
+      border: 1px solid gray;
+      margin: 10px auto;
+      font-size: 30px;
+      border-radius: 5px;
+      text-align: center;
+      padding: 5px;
+      cursor: pointer;
+      background: 
+    }
+    .gotop{
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border: 1px solid black;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      padding: 2px;
+      border-radius: 5px;
+    }
+
